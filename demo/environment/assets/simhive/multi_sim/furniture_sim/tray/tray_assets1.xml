@@ -1,0 +1,12 @@
+<mujocoinclude>
+    <asset>
+    <!-- From simhive/multi_sim/furniture_sim/il_force/door0_assets.xml -->
+        <!-- <texture file="../multi_sim/furniture_sim/textures/dark-wood.png" type="cube" name="dark-wood1" /> -->
+        <material name="white" rgba="1 1 1 1" shininess="0" reflectance="0" specular="0" texuniform="false" />
+    </asset>
+    <default>
+        <default class="viz_tray1">
+            <geom conaffinity="0" contype="0" group="1" material="white" type="box"/>
+        </default>
+    </default>
+</mujocoinclude>

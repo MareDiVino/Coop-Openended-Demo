@@ -1,0 +1,7 @@
+<mujocoinclude>
+    <asset>
+        <texture type="2d" name="mug" file="../multi_sim/YCB_sim/textures/mug.png" />
+        <material name="mug" texture="mug" specular="0.5" shininess="0.5" />
+        <mesh file="../multi_sim/YCB_sim/meshes/mug.obj" scale='1.3 1.3 1.3'/>
+    </asset>
+</mujocoinclude>

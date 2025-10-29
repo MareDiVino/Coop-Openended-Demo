@@ -1,0 +1,8 @@
+<mujocoinclude>
+    <geom material="plate" class="ycb_viz" mesh="plate" />
+    <!-- mass set to zero here. The handle will have the mass that before was of the plate -->
+    <geom material="plate" class="ycb_col" mesh="plate" type="mesh" mass="0.0"/>
+    <!-- plate handle -->
+    <geom class="ycb_col" size="0.015 0.01 0.045" pos="0.14 0 0.01" euler="0 1.57 0" type="box" mass="0.279" />
+    <geom class="ycb_viz" size="0.015 0.01 0.045" pos="0.14 0 0.01" euler="0 1.57 0" type="box" mass="0" rgba="1 1 1 1" />
+</mujocoinclude>

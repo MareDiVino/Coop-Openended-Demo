@@ -1,0 +1,6 @@
+<mujocoinclude>
+  <asset>
+    <texture file="../multi_sim/furniture_sim/textures/steel-scratched.png" type="cube" name="steel-metal"/>
+    <material name="smetal" reflectance="1.0" shininess="1.0" specular="1.0" texrepeat="1 1" texture="steel-metal" texuniform="true"/>
+  </asset>
+</mujocoinclude>

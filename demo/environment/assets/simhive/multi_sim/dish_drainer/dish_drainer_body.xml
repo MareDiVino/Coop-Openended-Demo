@@ -1,0 +1,29 @@
+<!-- Asset taken from https://github.com/chernyadev/bigym/tree/master/bigym/envs/xmls/props/dish_drainer -->
+<mujocoinclude>
+  <geom material="dish_drainer" mesh="rack" class="visual"/>
+  <geom mesh="rack_collision_001" class="collision"/>
+  <geom mesh="rack_collision_002" class="collision"/>
+  <geom mesh="rack_collision_003" class="collision"/>
+  <geom mesh="rack_collision_004" class="collision"/>
+  <geom mesh="rack_collision_005" class="collision"/>
+  <geom mesh="rack_collision_006" class="collision"/>
+  <geom mesh="rack_collision_007" class="collision"/>
+  <geom mesh="rack_collision_008" class="collision"/>
+  <geom mesh="rack_collision_009" class="collision"/>
+  <geom mesh="rack_collision_010" class="collision"/>
+  <geom mesh="rack_collision_011" class="collision"/>
+  <geom mesh="rack_collision_012" class="collision"/>
+  <geom mesh="rack_collision_013" class="collision"/>
+  <geom mesh="rack_collision_014" class="collision"/>
+  <geom mesh="rack_collision_015" class="collision"/>
+  <geom mesh="rack_collision_016" class="collision"/>
+  <geom mesh="rack_collision_017" class="collision"/>
+  <geom mesh="rack_collision_018" class="collision"/>
+  <!--Use helpers below to align placement of objects in the rack-->
+  <site name="plate_slot_1" pos="0 0.08 0.15" euler="1.5708 0 0"/>
+  <site name="plate_slot_2" pos="0 0.05 0.15" euler="1.5708 0 0"/>
+  <site name="plate_slot_3" pos="0 0.02 0.15" euler="1.5708 0 0"/>
+  <site name="plate_slot_4" pos="0 -0.01 0.15" euler="1.5708 0 0"/>
+  <site name="plate_slot_5" pos="0 -0.04 0.15" euler="1.5708 0 0"/>
+  <site name="plate_slot_6" pos="0 -0.07 0.15" euler="1.5708 0 0"/>
+</mujocoinclude>

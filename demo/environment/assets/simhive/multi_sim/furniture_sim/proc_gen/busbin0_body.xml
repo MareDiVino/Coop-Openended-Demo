@@ -1,0 +1,8 @@
+
+            <geom class="viz_stl_Metal_bin" type="mesh" mesh="busbin" euler="0 0 3.14" group="1" contype="0" conaffinity="0" />
+            <geom type='box' pos='-.21 0 .09' size='.012 .33 .09' euler='0 -0.11 0' group="3" />
+            <geom type='box' pos='.21 0 .09' size='.012 .33 .09' euler='0 0.11 0' group="3" />
+            <geom type='box' pos='0 -.3 .09' size='.012 .24 .09' euler='0.11 0 1.57' group="3" />
+            <geom type='box' pos='0 .3 .09' size='.012 .24 .09' euler='-0.11 0 1.57' group="3"/>
+            <geom type='box' pos='0 0 .012' size='.21 .3 .012' group="3" />
+

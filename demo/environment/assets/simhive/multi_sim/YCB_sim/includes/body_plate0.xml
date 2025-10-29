@@ -1,0 +1,4 @@
+<mujocoinclude>
+    <geom material="plate" class="ycb_viz" mesh="plate" />
+    <geom material="plate" class="ycb_col" mesh="plate" type="mesh" mass="0.279"/>
+</mujocoinclude>

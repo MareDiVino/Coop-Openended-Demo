@@ -1,0 +1,4 @@
+<mujocoinclude>
+    <geom material="fork" class="ycb_viz" mesh="fork" />
+    <geom material="fork" class="ycb_col" type="box" size="0.1 0.02 0.01" pos="-0.02 -0.02 0"  mass="0.034" />
+</mujocoinclude>

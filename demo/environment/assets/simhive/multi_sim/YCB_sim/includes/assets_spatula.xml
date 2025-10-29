@@ -1,0 +1,7 @@
+<mujocoinclude>
+  <asset>
+    <texture type="2d" name="spatula" file="../multi_sim/YCB_sim/textures/spatula.png" />
+    <material name="spatula" texture="spatula" specular="0.5" shininess="0.5" />
+    <mesh file="../multi_sim/YCB_sim/meshes/spatula.obj" />
+  </asset>
+</mujocoinclude>

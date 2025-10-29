@@ -1,0 +1,4 @@
+<mujocoinclude>
+    <geom material="spoon" class="ycb_viz" mesh="spoon" />
+    <geom material="spoon" class="ycb_col" mesh="spoon" type="mesh" mass="0.03"/>
+</mujocoinclude>

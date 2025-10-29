@@ -1,0 +1,32 @@
+<mujocoinclude>
+    <body name="tray0" pos="0 0 0">
+    <geom type="box" pos="0 0.25 0" euler="0 3.14 0" size="0.15 0.15 0.01" contype="1" conaffinity="1" rgba='0.25 0.25 0.25 1'/>
+    <geom class="viz_tray0" pos="0 0.25 0" euler="0 3.14 0" type="box" size="0.15 0.15 0.01" rgba='0.25 0.25 0.25 1'/>
+    <site name="tray0_left" pos="0 0.25 0.01" type="box" size="0.15 0.15 0.01" rgba="1 0 0 0"/>
+    <site name="tray0_right" pos="0 -0.25 0.01" type="box" size="0.15 0.15 0.01" rgba="1 0 0 0"/>
+
+    <site name="mug0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="mug1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="wine_glass0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="wine_glass1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="fork0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="fork1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="spoon0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="spoon1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+
+    <geom type="box" pos="0 -0.25 0" size="0.15 0.15 0.01" contype="1" conaffinity="1" rgba='0.25 0.25 0.25 1'/>
+    <geom class="viz_tray0" pos="0 -0.25 0" type="box" size="0.15 0.15 0.01" rgba='0.25 0.25 0.25 1'/>
+
+    <site name="mug0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="mug1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="wine_glass0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="wine_glass1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="fork0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="fork1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="spoon0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+    <site name="spoon1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="1 0 0 0"/>
+
+    <geom type="box" pos="0.05 0 0" size="0.1 0.1 0.01" contype="1" conaffinity="1" rgba='0.25 0.25 0.25 1'/>
+    <geom class="viz_tray0" pos="0.1 0 0" type="box" size="0.05 0.1 0.01" rgba='0.25 0.25 0.25 1'/>
+    </body>
+</mujocoinclude>

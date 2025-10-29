@@ -1,0 +1,36 @@
+<mujocoinclude>
+<!-- 
+    Actuator structure taken from RoboVerse
+     - biasprm changed and tuned to 2*sqrt(Kp)
+     - ctrlrange kept the same as Vikash
+    The panda class referred here must have at least the attributes
+    forcelimited="true" ctrllimited="true" 
+-->
+    <actuator>
+        <general class="panda" name="panda1_joint1" joint="panda1_joint1" gainprm="4500" biasprm="0 -4500 -135" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint2" joint="panda1_joint2" gainprm="4500" biasprm="0 -4500 -135" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-1.8326 1.8326"/>
+        <general class="panda" name="panda1_joint3" joint="panda1_joint3" gainprm="3500" biasprm="0 -3500 -118" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint4" joint="panda1_joint4" gainprm="3500" biasprm="0 -3500 -118" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-3.1416 0.0"/>
+        <!-- <general class="panda" name="panda1_joint5" joint="panda1_joint5" gainprm="2000" biasprm="0 -2000 -90"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint6" joint="panda1_joint6" gainprm="2000" biasprm="0 -2000 -90"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-1.66 2.1817"/>
+        <general class="panda" name="panda1_joint7" joint="panda1_joint7" gainprm="2000" biasprm="0 -2000 -90"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/> -->
+        <!--
+            The gains above tend to saturate some actuators quite easily. However, this should not be a problem.
+            Below, gains have been reduced to saturate the actuators less, at the cost of tracking performance.
+            However, tracking with below actuators would stil better than previous actuators
+        -->
+        <!-- <general class="panda" name="panda1_joint1" joint="panda1_joint1" gainprm="3500" biasprm="0 -3500 -118" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint2" joint="panda1_joint2" gainprm="3500" biasprm="0 -3500 -118" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-1.8326 1.8326"/>
+        <general class="panda" name="panda1_joint3" joint="panda1_joint3" gainprm="2500" biasprm="0 -2500 -100" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint4" joint="panda1_joint4" gainprm="2500" biasprm="0 -2500 -100" dyntype="none" biastype="affine" forcerange="-87 87" ctrlrange="-3.1416 0.0"/>
+        <general class="panda" name="panda1_joint5" joint="panda1_joint5" gainprm="120" biasprm="0 -120 -22"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/>
+        <general class="panda" name="panda1_joint6" joint="panda1_joint6" gainprm="120" biasprm="0 -120 -22"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-1.66 2.1817"/>
+        <general class="panda" name="panda1_joint7" joint="panda1_joint7" gainprm="120" biasprm="0 -120 -22"  dyntype="none" biastype="affine" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/> -->
+        
+        <!-- Actuators below taken from Vikash -->
+        <position name="panda1_joint5" joint="panda1_joint5" class="panda" kp="120" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/> 
+        <position name="panda1_joint6" joint="panda1_joint6" class="panda" kp="120" forcerange="-12 12" ctrlrange="-1.66 2.1817"/> 
+        <position name="panda1_joint7" joint="panda1_joint7" class="panda" kp="120" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/>
+
+    </actuator>
+</mujocoinclude>

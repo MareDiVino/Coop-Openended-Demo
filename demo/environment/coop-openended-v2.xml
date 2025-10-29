@@ -1,0 +1,450 @@
+<mujoco model="Franka Reach">
+<!-- =================================================
+    Copyright 2020 Vikash Kumar
+    Model   :: Franka Reach (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com)
+    source  :: https://github.com/vikashplus/robohive
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -->
+    <visual>
+        <scale camera="0.1" framelength="0.004" framewidth="0.0001" forcewidth="0.01"/>
+        <global offwidth="1024" offheight="1024" />
+    </visual>
+
+    <size njmax='1000' nconmax='1000'/>
+
+    
+    <include file="assets/simhive/franka_sim/assets/assets.xml"/>
+    <include file="assets/simhive/multi_sim/movingbase/assets/assets0.xml"/>
+    <include file="assets/simhive/multi_sim/movingbase/assets/assets1.xml"/>
+    <include file="assets/simhive/multi_sim/furniture_sim/simpleTable/simpleTable_asset.xml"/>
+    <!-- <include file="assets/simhive/furniture_sim/hingecabinet/hingecabinet_asset.xml"/> -->
+    <include file="assets/simhive/multi_sim/furniture_sim/hingecabinet_nodoor/hingecabinet_asset.xml"/>
+    <include file="assets/simhive/multi_sim/movingbase/actuator0.xml"/>
+    <include file="assets/simhive/multi_sim/franka_sim/assets/actuator0_nogripper.xml"/>
+    <include file="assets/simhive/multi_sim/robotiq_sim/assets/assets0.xml"/>
+    <include file="assets/simhive/multi_sim/movingbase/actuator1.xml"/>
+	<include file="assets/simhive/multi_sim/franka_sim/assets/actuator1_nogripper.xml"/>
+    <include file="assets/simhive/multi_sim/robotiq_sim/assets/assets1.xml"/>
+    <include file="assets/simhive/multi_sim/furniture_sim/tray/tray_assets0.xml"/>
+    <include file="assets/simhive/multi_sim/furniture_sim/tray/tray_assets1.xml"/>
+    <!--<include file="assets/simhive/franka_sim/assets/gripper_actuator0.xml"/> -->
+    <include file="assets/simhive/furniture_sim/counters/counters_asset.xml"/>
+
+    <include file="assets/simhive/multi_sim/oven/oven_asset.xml"/>
+
+    <!--Objects to manipulate-->
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/defaults_ycb.xml"/>  
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_fork.xml"/>
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_spoon.xml"/>  
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_knife.xml"/>  
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_spatula.xml"/> 
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_plate.xml"/> 
+    <include file="assets/simhive/multi_sim/YCB_sim/includes/assets_mug.xml"/> 
+    <include file="assets/simhive/multi_sim/object_sim/bowl/assets.xml"/> 
+    <include file="assets/simhive/multi_sim/object_sim/common.xml"/> 
+
+
+    <include file="assets/simhive/furniture_sim/slidecabinet/slidecabinet_asset.xml"/>
+    
+
+    <compiler inertiafromgeom="auto" inertiagrouprange="3 4" angle="radian" meshdir="assets/simhive/franka_sim" texturedir="assets/simhive/franka_sim"/>
+
+    <!-- Options taken from tidybot2 mujoco scene. Without these options simulation breaks -->
+    <option integrator="implicitfast"/>
+    <option cone="elliptic" impratio="10"/>
+    
+    <!--sky-->
+    
+    <asset><include file="assets/simhive/multi_sim/scene_sim/topfloor_scene.xml"/>
+        <texture type="cube" gridsize="3 4" gridlayout=".U..LFRB.D.." name="sky" file="../scene_sim/textures/cloudy.png" />
+        <material name="sky" texture="sky" specular="1" shininess="1" />
+    </asset>
+
+    <!--pasta texture-->
+
+    <asset>
+        <texture name="pasta_tex" type="2d" file="assets/simhive/multi_sim/scene_sim/textures/pasta_2.png"/>
+        <material name="pasta_mat" texture="pasta_tex" specular="0.3" shininess="0.1" reflectance="0.0"/>
+    </asset>
+
+
+    <!-- <Mesh for exernal .obj-->
+
+    <asset>
+        <mesh name="pasta_mesh" file="assets/simhive/multi_sim/pasta/new_pasta_and_mixed_dishes_2/simplify_pasta_2-3.obj" scale=".85 .85 .85"/>
+    </asset>
+
+    <asset>
+        <mesh name="wheelchair_mesh" file="assets/simhive/multi_sim/Wheelchair/simplify_Wheelchair.obj" scale="0.022 0.022 0.022"/>
+    </asset>
+
+    <asset>
+        <mesh name="man_mesh" file="assets/simhive/multi_sim/man/sitting_mannequin.obj" scale="0.9 0.9 0.9"/>
+    </asset>
+
+    <asset>
+        <mesh name="wine_mesh" file="assets/simhive/multi_sim/wine/Glass/Glass OBJ.obj" scale="0.024 0.024 0.024"/>
+    </asset>
+
+    <asset>
+        <mesh name="pot_mesh" file="assets/simhive/multi_sim/pot/Pan3.obj" scale="0.04 0.04 0.04"/>
+    </asset>
+
+    <asset>
+        <mesh name="pan_mesh" file="assets/simhive/multi_sim/pan/uploads_files_2937991_fryingpan.obj" scale="2 2 2"/>
+    </asset>
+
+    <asset>
+        <texture name="wallpaper_tex" type="2d" file="assets/simhive/multi_sim/scene_sim/textures/colore-verde-pallido_179286-64.png"/>
+        <material name="wallpaper_mat" texture="wallpaper_tex" texuniform="true"/>
+    </asset>
+
+
+
+    <worldbody>
+    
+        <light directional="true" diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 2" dir="0 0 -1" castshadow="false"/>
+        <light directional="true" diffuse=".6 .6 .6" specular="0.2 0.2 0.2" pos="0 0 2" dir="0 0 -1"/>
+        
+        <!-- <general view camera -->
+        <camera name="general_view" pos="-0.980 4.556 2.149" xyaxes="-1.000 -0.000 0.000 0.000 -0.259 0.966"/>
+
+        <!-- <user0 (left) front camera -->
+        <camera name="user0_front_view" pos="-1.180 1.194 1.772" xyaxes="-0.819 -0.574 -0.000 0.347 -0.495 0.797"/>
+            
+        <!-- <user1 (right) front camera -->
+        <camera name="user1_front_view" pos="-0.731 1.235 1.918" xyaxes="-0.826 0.563 0.000 -0.354 -0.518 0.779"/>
+
+    
+        <!-- <camera name='left_cam' pos='-2.3 1.2 1.8' euler='2.35 -2.09 0'/> -->
+        <!-- <camera name='right_cam' pos='2.3 1.2 1.8' euler='-0.7916  1.0516 -3.1416'/> -->
+        <!-- <camera name='top_cam' pos='0 0.5 4' euler='0 0 0'/> -->
+
+        <site name='ee_target0' type='box' size='.03 .07 .04' pos='0.1 0 0' group='1' rgba='0 1 .4 0.' euler="0 0 0"/>
+        <site name='ee_target1' type='box' size='.03 .07 .04' pos='-0.1 0 0' group='1' rgba='1 0 .4 0.' euler="0 0 0"/>
+
+        <site name='workspace' type='box' size='.6 .375 .25' pos='0 0.475 1.0' group='3' rgba='0 0 .4 .2'/>
+
+        <!-- Robots -->
+        <!-- Right robot -->
+        <body name="mobile_manipulator0" pos='-0.5 -0.45 0.0' euler='0 0 0'>
+            <site name='base_target0' type='box' size='.03 .07 .04' pos='0 0 0.35' group='1' rgba='1 1 1 1' euler="0 0 0"/>
+            <include file="assets/simhive/multi_sim/movingbase/base0.xml"/>
+        </body>
+        <body name="robot_panda0" pos='0.0 0.0 0.735' euler='0 0 1.5708'>
+            <camera name='franka0_view' pos='0.1 0 0.225' euler='0 -1.57 -1.57'/>
+            <camera name='franka0_front_cam' pos='1.3 0.0 0.63' euler="0 1.2 1.57" />
+            <site name='franka0_front_cam' pos='1.3 0.0 0.63' euler="0 1.2 1.57" />
+            <camera name='franka0_left_ego_cam'  fovy='85' pos='-0.3 0.65 0.65' xyaxes="-0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <site name='franka0_left_ego_cam' pos='-0.3 0.65 0.65' xyaxes="-0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <camera name='franka0_right_ego_cam' fovy='85' pos='-0.3 -0.65 0.65' xyaxes="0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <site name='franka0_right_ego_cam' pos='-0.3 -0.65 0.65' xyaxes="0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+
+            <!-- Specify contype='0' conaffinity='0' to disable collision detection for this geom -->
+            <geom type='cylinder' size='.120 .4' pos='-.04 0 -.4' contype='0' conaffinity='0'  mass='0.1' rgba='0.25 0.25 0.25 1'/>
+            <body pos='0.22 0.0 0.05'>
+                <include file="assets/simhive/multi_sim/furniture_sim/tray/tray0_body.xml"/>
+            </body> 
+            <include file="assets/simhive/multi_sim/franka_sim/assets/chain0_nogripper.xml"/>
+        </body>
+        <!-- Robotiq Hand-->
+        <!-- This has the hand horizontally aligned-->
+        <body name="ee_mount0" pos="0 0 .11" euler="0 0 -0.785398">
+            <include file="assets/simhive/multi_sim/robotiq_sim/assets/chain0.xml"/>
+        </body>
+
+        <!-- Left robot -->
+        <!-- Landmarks for the left robot -->
+        <site name="landmark_stove" type="cylinder" size="0.1 0.01" pos='-2.61 -1.25 0.0' euler='0 0 3.14' rgba="1 1 1 0.2"/>
+        <site name="landmark_plates" type="cylinder" size="0.1 0.01" pos='-1.6 -1.3 0.0' euler='0 0 3.14' rgba="1 1 1 0.2"/>
+        <site name="landmark_bowls" type="cylinder" size="0.1 0.01" pos='-0.8 -1.3 0.0' euler='0 0 3.14' rgba="1 1 1 0.2"/>
+        <site name="landmark_tableware" type="cylinder" size="0.1 0.01" pos='-0.15 -1.35 0.0' euler='0 0 3.14' rgba="1 1 1 0.2"/>
+        <site name="landmark_serveusr0" type="cylinder" size="0.1 0.01" pos='-0.5 -0.45 0.0' euler='0 0 0' rgba="1 1 1 0.2"/>
+        <site name="landmark_serveusr1" type="cylinder" size="0.1 0.01" pos='-1.5 -0.45 0.0' euler='0 0 0' rgba="1 1 1 0.2"/>
+
+        <body name="mobile_manipulator1" pos='-1.5 -0.45 0.0' euler='0 0 0' >
+            <site name='base_target1' type='box' size='.03 .07 .04' pos='0.0 0.0 0.35' group='1' rgba='0.25 0.25 0.25 1' euler="0 0 0"/>
+            <include file="assets/simhive/multi_sim/movingbase/base1.xml"/>
+        </body>
+        <body name="robot_panda1" pos='0.0 0.0 0.735' euler='0 0 1.5708'>
+            <!-- <camera name='franka1_ego_cam' pos='0 0.5 1.115' euler="0 -0.52 -1.57" /> -->
+            <!-- <camera name='franka1_ego_cam' pos='-0.15 0.5 0.355' fovy='75' xyaxes="-0.707 -0.707 0 0.2988 -0.2988 0.9063"/>
+            <site name='franka1_ego_cam' pos='-0.15 0.5 0.355' xyaxes="-0.707 -0.707 0 0.2988 -0.2988 0.9063"/> -->
+            <camera name='franka1_view' pos='0.1 0 0.225' euler='0 -1.57 -1.57'/>
+            <camera name='franka1_left_ego_cam'  fovy='85' pos='-0.3 0.65 0.65' xyaxes="-0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <site name='franka1_left_ego_cam' pos='-0.3 0.65 0.65' xyaxes="-0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <camera name='franka1_right_ego_cam' fovy='85' pos='-0.3 -0.65 0.65' xyaxes="0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <site name='franka1_right_ego_cam' pos='-0.3 -0.65 0.65' xyaxes="0.57357644 -0.81915204  0. 0.1422 0.0996 0.9848"/>
+            <camera name='franka1_front_cam' pos='1.3 0.0 0.63' euler="0 1.2 1.57" />
+            <site name='franka1_front_cam' pos='1.3 0.0 0.63' euler="0 1.2 1.57" />
+            <!-- Specify contype='0' conaffinity='0' to disable collision detection for this geom -->
+            <geom type='cylinder' size='.120 .4' pos='-.04 0 -.4' contype='0' conaffinity='0' mass='0.1' rgba="1 1 1 1"/>
+            <body pos='0.22 0.0 0.08'>
+                <include file="assets/simhive/multi_sim/furniture_sim/tray/tray1_body.xml"/>
+            </body> 
+            <include file="assets/simhive/multi_sim/franka_sim/assets/chain1_nogripper.xml"/>
+        </body>
+        <body name="ee_mount1" pos="0 0 .11" euler="0 0 -0.785398">
+            <include file="assets/simhive/multi_sim/robotiq_sim/assets/chain1.xml"/>
+        </body>
+
+        <!-- Table -->
+        <body name="simpleWoodTable_body" pos="-1.0 0.35 0" euler="0 0 1.57" childclass="body_simpleTable">
+            <geom class="viz_simpleWoodTable" type="box" size="0.4 0.6 0.025" pos="0 0 0.735"/>
+            <geom class="viz_simpleWoodTable" type="box" size="0.38 0.38 0.05" pos="0 0 0.66"/>
+            <geom class="viz_simpleWoodTable" type="box" size="0.025 0.025 0.305" pos="-0.35 0.35 0.305"/>
+            <geom class="viz_simpleWoodTable" type="box" size="0.025 0.025 0.305" pos="-0.35 -0.35 0.305"/>
+            <geom class="viz_simpleWoodTable" type="box" size="0.025 0.025 0.305" pos="0.35 0.35 0.305"/>
+            <geom class="viz_simpleWoodTable" type="box" size="0.025 0.025 0.305" pos="0.35 -0.35 0.305"/>
+
+            <geom type="box" size="0.4 0.6 0.025" pos="0 0 0.735" mass="40"/>
+            <geom type="box" size="0.38 0.38 0.05" pos="0 0 0.66"/>
+            <geom type="box" size="0.025 0.025 0.305" pos="-0.35 0.35 0.305"/>
+            <geom type="box" size="0.025 0.025 0.305" pos="-0.35 -0.35 0.305"/>
+            <geom type="box" size="0.025 0.025 0.305" pos="0.35 0.35 0.305"/>
+            <geom type="box" size="0.025 0.025 0.305" pos="0.35 -0.35 0.305"/>
+
+            <site name="handover" pos='0.0 0.0 0.765' type='box' size='.05 .05 0.01' rgba="0 1 0 1"/>
+            <site name="placedrink_goal_usr0" pos='0.0 -0.2 0.765' type='box' size='.05 .05 0.01' rgba="1 0 0 1"/>
+            <site name="placedrink_goal_usr1" pos='0.0 0.2 0.765' type='box' size='.05 .05 0.01' rgba="1 0 0 1"/>
+            <site name="place_goal_usr0" pos='0.0 -0.45 0.765' type='box' size='.05 .05 0.01' rgba="0.25 0.25 0.25 0.2"/>
+            <site name="place_goal_usr1" pos='0.0 0.45 0.765' type='box' size='.05 .05 0.01' rgba="1 1 1 0.2"/>        </body>
+
+        <!-- Drop areas -->
+        <site name='drop_target0_1' type='box' size='.1 .1' pos='10 10 10' group='1' rgba='0 1 0 .4'/>
+
+        <site name='drop_target1_1' type='box' size='.1 .1' pos=' 10 10 10' group='1' rgba='1 0 0 .4'/>
+
+        <!-- Robot targets -->
+        <site name='current_target0' type='sphere' size='.06' pos='-0.4 0.5 1.4' group='1' rgba='1 0 0 .4'/>
+        <site name='pick_target0' type='sphere' size='.088' pos='-0.4 0.5 1.25' group='1' rgba='.1 .8 .2 .4'/>
+
+        <site name='current_target1' type='sphere' size='.06' pos='0.4 0.5 1.4' group='1' rgba='1 0 0 .4'/>
+        <site name='pick_target1' type='sphere' size='.088' pos='0.4 0.5 1.25' group='1' rgba='.1 .8 .2 .4'/>
+
+        <!-- Back Wall -->
+
+
+        <!-- Cabinet -->
+        <body name="hingecabinet_1" pos="0 -2.22 1.7" euler="0 0 3.14">
+            <geom material="M_hinge_blue" pos="-0.38 0 0" size="0.02 0.3 0.2" type="box"/>
+            <geom material="M_hinge_blue" pos="0 0 0.18" size="0.4 0.3 0.02" type="box"/>
+            <geom material="M_hinge_blue" pos="0 0 -0.18" size="0.4 0.3 0.02" type="box"/>
+            <geom material="M_hinge_blue" pos="0 0.28 0" size="0.4 0.02 0.16" type="box"/>
+
+            <geom class="hinge_collision" pos="0.38 0 0" size="0.02 0.3 0.2" type="box" mass=".2"/>
+            <geom class="hinge_collision" pos="0 0 0.18" size="0.4 0.3 0.02" type="box" mass=".2"/>
+            <geom class="hinge_collision" pos="0 0 -0.18" size="0.4 0.3 0.02" type="box" mass=".2"/>
+            <!-- No need for collisions on the back wall of the cabinet -->
+            <!-- <geom class="hinge_collision" pos="0. 0.28 0" size="0.14 0.02 0.16" type="box" mass=".2"/> -->
+        </body>
+
+        <!-- Middle Cabinet -->
+
+        <body name="slidecabinet0" pos="-0.8 -2.22 1.7" euler="3.14 0 0">
+            <include file="assets/simhive/multi_sim/furniture_sim/slidecabinet/slidecabinet_body0.xml"/>
+        </body>
+
+        <!-- Rightmost Cabinet -->
+        <body name="slidecabinet1" pos="-1.6 -2.22 1.7" euler="3.14 0 0">
+            <include file="assets/simhive/multi_sim/furniture_sim/slidecabinet/slidecabinet_body1.xml"/>
+        </body>
+
+
+        <!-- walls -->
+        <body name="wall_left">
+            <geom type="box" size="1.0 5.3 4.5" pos="-5.0 -0.5 2.25" material="wallpaper_mat"/>
+        </body>
+
+        <body name="wall_right">
+            <geom type="box" size="1.0 5.3 4.5" pos="3.0 -0.5 2.25" material="wallpaper_mat"/>
+        </body>
+
+        <body name="wall_back">
+            <geom type="box" size="4.0 1.0 4.5" pos="-1.0 -4.0 2.25" material="wallpaper_mat"/>
+        </body>
+
+        <!-- Ceiling -->
+        <body name="ceiling">
+            <geom type="box" size="4.5 6.3 0.5" pos="-1.0 -0.9 4.15" rgba="1 1 1 1" />
+        </body>
+        
+         <!-- front wall -->
+        <body name="wall_front" pos="-0.75 4 1">
+            <geom type="box" size="6 0.01 3" pos="0 0.8 0.2" rgba="0.5 0.5 0.5 1"/>
+        </body>
+
+        <!-- man on wheelchair -->
+        <body name="wheelchair0" pos="-0.3 0.3 0" euler="1.57 -1.57 0">
+            <!-- camera user 0 view (left) -->
+            <camera name="user0_view" pos="0 1.1 -0.15" euler="0.2 3.14 0"/>
+            <body name="user0" pos="0 0.07 -0.25" euler="0 0 0">
+                <geom type="mesh" mesh="man_mesh" rgba="0.25 0.25 0.25 1"/>
+            </body>
+            <geom type="mesh" mesh="wheelchair_mesh" rgba="0.1 0.1 0.1 1" contype="0" conaffinity="0"/>
+        </body>
+
+        <body name="wheelchair1" pos="-1.7 0.3 0" euler="1.57 1.57 0">
+            <!-- camera user 1 view (right) -->
+            <camera name="user1_view" pos="0 1.1 -0.15" euler="0.2 3.14 0"/>
+            <body name="user1" pos="0 0.07 -0.25" euler="0 0 0">
+                <geom type="mesh" mesh="man_mesh" rgba="1 1 1 1"/>
+            </body>
+            <geom type="mesh" mesh="wheelchair_mesh" rgba="0.1 0.1 0.1 1" contype="0" conaffinity="0"/>
+        </body>
+
+
+        <body name="counter0" pos='-1.5 -1.5 -0.7' euler='0 0 1.57'>
+            <include file="assets/simhive/multi_sim/counters/box_counter_body0.xml"/>
+        </body>
+
+        <body name="oven" pos='-2.5 -2.5 -0.69' euler='0 0 3.14'>
+            <include file="assets/simhive/multi_sim/oven/oven_body.xml"/>
+        </body>
+
+    
+        <!-- Objects to manipulate-->
+
+
+        <!-- forks -->
+
+        <body name="fork0" pos="-0.05 -2.05 0.96" euler="0 0 1.57">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_fork0.xml"/>
+            <freejoint name="fork0_joint"/>
+        </body>
+
+        <body name="fork1" pos="-0.20 -2.05 0.96" euler="0 0 1.57">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_fork1.xml"/>
+            <freejoint name="fork1_joint"/>
+        </body>
+
+
+        <!-- spoons -->
+
+        <body name="spoon0" pos="-0.35 -2.05 0.96" euler="0 0 1.85">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_spoon0.xml"/>
+            <freejoint name="spoon0_joint"/>
+        </body>
+
+        <body name="spoon1" pos="-0.45 -2.05 0.96" euler="0 0 1.85">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_spoon1.xml"/>
+            <freejoint name="spoon1_joint"/>
+        </body>
+
+        <!-- cutlery_tray -->
+
+        <body name="cutlery_tray" pos="-0.25 -2.1 0.9" euler="0 0 0">
+            <geom type="box" size="0.3 0.2 0.005" pos="0 0 0" rgba="1 1 1 1"/>
+            <geom type="box" size="0.3 0.005 0.02" pos="0 0.2 0.015" rgba="1 1 1 1"/>
+            <geom type="box" size="0.3 0.005 0.02" pos="0 -0.2 0.015" rgba="1 1 1 1"/>
+            <geom type="box" size="0.005 0.2 0.02" pos="0.3 0 0.015" rgba="1 1 1 1"/>
+            <geom type="box" size="0.005 0.2 0.02" pos="-0.3 0 0.015" rgba="1 1 1 1"/>
+        </body>
+
+
+        <!-- plates -->
+        <!-- down -->
+        <body name="plate0" pos="-1.85 -2.1 1.6" euler="0 0 1.57">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_plate0_with_handle.xml"/>
+            <freejoint name="plate0_joint"/>
+        </body>
+
+        <!-- up -->
+        <body name="plate1" pos="-1.85 -2.1 1.7" euler="0 0 1.57">
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_plate1_with_handle.xml"/>
+            <freejoint name="plate1_joint"/>
+        </body>
+
+
+
+        <body name="dish_divider" pos="-1.8 -2.05 1.75"> 
+            <geom name="dish_shelf_1" type="box" size="0.2 0.12 0.005" pos="0 0 -0.08" rgba="0 0 0 1"/>
+        </body>
+        <body name="bowl_section" pos="-1.0 -2.05 1.75"> 
+            <geom name="bowl_shelf_1" type="box" size="0.2 0.12 0.005" pos="0 0 -0.08" rgba="0 0 0 1"/>
+        </body>
+
+        <!-- bowls -->
+
+        <body name="bowl0" pos="-1.0 -2.05 1.6" euler="0 0 1.57" childclass="grab">
+            <include file="assets/simhive/multi_sim/object_sim/bowl/body0_with_handle.xml"/> 
+            <freejoint name="bowl0_joint"/>
+        </body>
+        
+
+        <body name="bowl1" pos="-1.0 -2.05 1.75" euler="0 0 1.57" childclass="grab">
+            <include file="assets/simhive/multi_sim/object_sim/bowl/body1_with_handle.xml"/> 
+            <freejoint name="bowl1_joint"/>
+        </body>
+
+
+
+        <!-- wine glass -->
+
+        <body name="wine_glass0" pos="-0.25 -1.95 1.665" euler="1.57 0 0">
+            <geom class='ycb_viz' type="mesh" mesh="wine_mesh" />
+            <!-- upper cup -->
+            <geom class='ycb_col' type="box" size="0.04 0.035 0.055" pos="0 0.065 -0.01" euler="1.57 0 0" mass='0.03'/>
+            <!-- stem -->
+            <geom class='ycb_col' type="box" size="0.015 0.015 0.065" pos="0 -0.054 -0.01" euler="1.57 0 0" mass='0.01'/>
+            <!-- base -->
+            <geom class='ycb_col' type="box" size="0.04 0.04 0.007" pos="0 -0.115 -0.01" euler="1.57 0 0" mass='0.01'/>
+            <freejoint name="wine_glass0_joint"/>
+        </body>
+
+        <body name="wine_glass1" pos="-0.05 -1.95 1.665" euler="1.57 0 0">
+            <geom class='ycb_viz' type="mesh" mesh="wine_mesh" />
+            <!-- upper cup -->
+            <geom class='ycb_col' type="box" size="0.04 0.035 0.055" pos="0 0.065 -0.01" euler="1.57 0 0" mass='0.03'/>
+            <!-- stem -->
+            <geom class='ycb_col' type="box" size="0.015 0.015 0.065" pos="0 -0.054 -0.01" euler="1.57 0 0" mass='0.01'/>
+            <!-- base -->
+            <geom class='ycb_col' type="box" size="0.04 0.04 0.007" pos="0 -0.115 -0.01" euler="1.57 0 0" mass='0.01'/>
+            <freejoint name="wine_glass1_joint"/>
+        </body>
+
+
+        <!-- beer glass mug -->
+
+        <body name="mug0" pos="0.32 -1.95 1.54" euler="0 0 1.57">
+            <site name="mug0" />
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_mug0.xml"/>
+            <freejoint name="mug0_joint"/>
+        </body>
+
+        <body name="mug1" pos="0.15 -1.95 1.54" euler="0 0 1.57">
+            <site name="mug1" />
+            <include file="assets/simhive/multi_sim/YCB_sim/includes/body_mug1.xml"/>
+            <freejoint name="mug1_joint"/>
+        </body>
+
+
+
+        <body name="pan" pos="-2.365 -1.7 0.93" euler="1.57 0 0">
+            <geom class='ycb_viz' type="mesh" mesh="pan_mesh"/>
+            <!-- handle -->
+            <geom class='ycb_col' type="box" size="0.02 0.01 0.1" pos="0 0.06 0.12" euler="0.17 0 0" mass='0.3'/>
+            <!-- pan -->
+            <geom class='ycb_col' type="cylinder" size="0.12 0.01" pos="0 0.01 0.33" euler="1.57 0 0" mass='0.3'/>
+            <!-- pasta -->
+            <body name="pasta" pos="0 0.01 0.36" euler="-1.57 0 0">
+                <geom type="mesh" mesh="pasta_mesh" material="pasta_mat"/>
+            </body>             
+            <freejoint name="pan_joint"/>
+        </body>
+
+        <body name="pot" pos="-2.82 -2.1 0.935" euler="0 1.57 1.57">
+            <geom class='ycb_viz' type="mesh" mesh="pot_mesh"/>
+            <!-- handle -->
+            <geom class='ycb_col' type="box" size="0.03 0.11 0.015" pos="0.23 0.11 0.0" euler="0 0 1.77" mass='0.3'/>
+            <!-- pot -->
+            <geom class='ycb_col' type="cylinder" size="0.13 0.015" pos="0.0 0.01 0.0" euler="1.57 0 0" mass='0.2'/>
+            <!-- soup -->
+            <geom name="soup" type="ellipsoid" size="0.12 0.12 0.03" pos="0 0.05 0."
+            rgba="0.9 0.3 0.1 0.6" euler="1.57 0 0" contype="0" conaffinity="0" />
+            <freejoint name="pot_joint"/>
+        </body>
+    </worldbody>
+
+</mujoco>

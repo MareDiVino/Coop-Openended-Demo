@@ -1,0 +1,26 @@
+<mujocoinclude model="">
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: Objects (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Sudeep Dasari (sdasari@andrew.cmu.edu )
+    Details :: https://github.com/vikashplus/object_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+    <geom name="bowl0_visual" mesh="bowl"/>
+    <geom name="bowl0_contact0" mesh="bowl_contact0" class="object_col" mass='0'/>
+    <geom name="bowl0_contact1" mesh="bowl_contact1" class="object_col" mass='0'/>
+    <geom name="bowl0_contact2" mesh="bowl_contact2" class="object_col" mass='0'/>
+    <geom name="bowl0_contact3" mesh="bowl_contact3" class="object_col" mass='0'/>
+    <geom name="bowl0_contact4" mesh="bowl_contact4" class="object_col" mass='0'/>
+    <geom name="bowl0_contact5" mesh="bowl_contact5" class="object_col" mass='0'/>
+    <geom name="bowl0_contact6" mesh="bowl_contact6" class="object_col" mass='0'/>
+    <geom name="bowl0_contact7" mesh="bowl_contact7" class="object_col" mass='0'/>
+    <geom name="bowl0_contact8" mesh="bowl_contact8" class="object_col" mass='0'/>
+    <geom name="bowl0_contact9" mesh="bowl_contact9" class="object_col" mass='0'/>
+    <geom name="bowl0_contact10" mesh="bowl_contact10" class="object_col" mass='0'/>
+    <geom name="bowl0_contact11" mesh="bowl_contact11" class="object_col" mass='0'/>
+    <!-- bowl handle -->
+    <geom class='object_col' type="box" size="0.02 0.01 0.05" pos="0.08 0 -0.019" euler="0 1.57 0"/>
+    <geom contype="0" conaffinity="0" type="box" size="0.02 0.01 0.05" pos="0.08 0 -0.019" euler="0 1.57 0" rgba="1 0 0 1"/>
+
+</mujocoinclude>

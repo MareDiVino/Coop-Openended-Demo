@@ -1,0 +1,36 @@
+<mujocoinclude>
+    <body name="tray1" pos="0 0 0" >
+    <geom type="box" pos="0 0.25 0" euler="0 0 -1.57" size="0.15 0.15 0.01" contype="1" conaffinity="1" rgba="1 1 1 1"/>
+    <geom class="viz_tray1" pos="0 0.25 0" euler="0 0 -1.57" type="box" size="0.15 0.15 0.01" rgba="1 1 1 1"/>
+    <site name="tray1_left" pos="0 0.25 0.01" type="box" size="0.15 0.15 0.01" rgba="1 0 0 0"/>
+    <site name="tray1_right" pos="0 -0.25 0.01" type="box" size="0.15 0.15 0.01" rgba="1 0 0 0"/>
+
+    <site name="pasta_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pasta_pick_reset_left" pos="-0.3 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pasta_tilted_reset_left" pos="-0.3 0.4 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pasta_far_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pot_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pot_far_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="bowl0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="bowl1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="plate0_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="plate1_pick_goal_left" pos="0 0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+
+    <geom type="box" pos="0 -0.25 0" size="0.15 0.15 0.01" contype="1" conaffinity="1" rgba="1 1 1 1"/>
+    <geom class="viz_tray1" pos="0 -0.25 0" type="box" size="0.15 0.15 0.01" rgba="0.7 0.7 0.7 1"/>
+
+    <site name="pasta_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="pasta_pick_reset_right" pos="-0.3 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pasta_tilted_reset_right" pos="-0.3 -0.4 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="pasta_far_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="pot_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="pot_far_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 0 1 0"/>
+    <site name="bowl0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="bowl1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="plate0_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+    <site name="plate1_pick_goal_right" pos="0 -0.25 0.01" type="box" size="0.05 0.05 0.01" rgba="0 1 0 0"/>
+
+    <geom type="box" pos="0.05 0 0" size="0.1 0.1 0.01" contype="1" conaffinity="1" rgba="0 0 0 0"/>
+    <geom class="viz_tray1" pos="0.1 0 0" type="box" size="0.05 0.1 0.01" rgba="0.7 0.7 0.7 1"/>
+    </body>
+</mujocoinclude>

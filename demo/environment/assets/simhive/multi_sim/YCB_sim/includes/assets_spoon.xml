@@ -1,0 +1,7 @@
+<mujocoinclude>
+  <asset>
+    <texture type="2d" name="spoon" file="../multi_sim/YCB_sim/textures/spoon.png" />
+    <material name="spoon" texture="spoon" specular="0.5" shininess="0.5" />
+    <mesh file="../multi_sim/YCB_sim/meshes/spoon.obj" />
+  </asset>
+</mujocoinclude>

@@ -1,0 +1,20 @@
+<mujocoinclude>
+  <asset>
+    <material name="black0" rgba="0.25 0.25 0.25 1"/>
+    <material name="gray0" rgba="0.25 0.25 0.25 1"/>
+    <material name="dark_gray0" rgba="0.25 0.25 0.25 1"/>
+    <mesh file="../multi_sim/movingbase/assets/meshes/bumper.stl"/>
+    <mesh file="../multi_sim/movingbase/assets/meshes/bottom_plate.stl"/>
+    <mesh file="../multi_sim/movingbase/assets/meshes/body.stl"/>
+    <mesh file="../multi_sim/movingbase/assets/meshes/top_plate.stl"/>
+    <mesh file="../multi_sim/movingbase/assets/meshes/arm_plate.stl"/>
+  </asset>
+   <default>
+    <default class="visual_base">
+      <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="collision_base">
+      <geom type="mesh" group="3"/>
+    </default>
+  </default>
+</mujocoinclude>

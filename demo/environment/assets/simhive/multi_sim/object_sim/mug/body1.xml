@@ -1,0 +1,24 @@
+<mujocoinclude model="">
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: Objects (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Sudeep Dasari (sdasari@andrew.cmu.edu )
+    Details :: https://github.com/vikashplus/object_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+    <geom name="mug1_visual" mesh="mug" rgba="1 0 0 1.0" />
+    <geom name="mug1_contact0" mesh="mug_contact0" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact1" mesh="mug_contact1" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact2" mesh="mug_contact2" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact3" mesh="mug_contact3" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact4" mesh="mug_contact4" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact5" mesh="mug_contact5" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact6" mesh="mug_contact6" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact7" mesh="mug_contact7" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact8" mesh="mug_contact8" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact9" mesh="mug_contact9" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact10" mesh="mug_contact10" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact11" mesh="mug_contact11" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact12" mesh="mug_contact12" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+    <geom name="mug1_contact13" mesh="mug_contact13" class="object_col" rgba="1 0 0 1.0" solimp="0.998 0.998 0.001" solref="0.02 1" density="100" friction="1.95 0.5 0.5" condim="4"/>
+</mujocoinclude>

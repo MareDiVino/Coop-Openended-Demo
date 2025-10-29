@@ -1,0 +1,6 @@
+<mujocoinclude>
+    <geom material="mug" class="ycb_viz" mesh="mug" />
+    <!-- <geom material="mug" class="ycb_col" mesh="mug" type="mesh" mass="0.118"/> -->
+    <geom material="mug" class="ycb_col" size="0.06 0.06 0.05" pos="-0.03 0.025 0.05" type="box" mass="0.06"  />
+    <geom material="mug" class="ycb_col" size="0.015 0.01 0.038" pos="0.047 0.025 0.05" type="box" mass="0.06" />
+</mujocoinclude>

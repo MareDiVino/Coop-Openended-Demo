@@ -1,0 +1,21 @@
+<mujocoinclude>
+
+  <body name="base_link_1"> 
+    <site name='mobile_base1' pos='0 0 0.168' size='0.01' euler='0 0 0'/>
+    <joint name="joint_x_1" type="slide" axis="1 0 0"/>
+    <joint name="joint_y_1" type="slide" axis="0 1 0"/>
+    <joint name="joint_th_1" type="hinge" axis="0 0 1"/>
+    
+    <geom class="visual_base_1" mesh="bumper_1" rgba="1 1 1 1"/>
+    <geom class="visual_base_1" mesh="bottom_plate_1" rgba="1 1 1 1"/>
+    <geom class="visual_base_1" mesh="body_1" rgba="1 1 1 1"/>
+    <geom class="visual_base_1" mesh="top_plate_1" rgba="1 1 1 1"/>
+    <geom class="visual_base_1" mesh="arm_plate_1" rgba="1 1 1 1"/>
+    
+    <geom class="collision_base_1" mesh="bumper_1"/>
+    <geom class="collision_base_1" mesh="bottom_plate_1"/>
+    <geom class="collision_base_1" mesh="body_1" group="4"/>
+    <geom class="collision_base_1" mesh="top_plate_1"/>
+    <geom class="collision_base_1" mesh="arm_plate_1"/>
+  </body>
+</mujocoinclude>
